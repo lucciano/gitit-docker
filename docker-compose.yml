@@ -1,0 +1,14 @@
+version: "2.0"
+services:
+  gitit:
+    image: gitit
+    build:
+      context: ./
+    volumes:
+      - ./gitit.wiki:/gitit.wiki
+    ports:
+      - 80:5001
+    environment:
+      PATH: "/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+      LANG: "en_US.UTF-8"
+    command : gitit -f /gitit.wiki/gitit.conf
