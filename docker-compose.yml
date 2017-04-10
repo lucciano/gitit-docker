@@ -11,4 +11,4 @@ services:
       LANG: "en_US.UTF-8"
     command : gitit -f gitit.conf
     ports:
-      - "80:5001"
+    - "80:5001"
