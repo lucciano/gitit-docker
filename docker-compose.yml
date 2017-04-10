@@ -1,14 +1,14 @@
-version: "2.0"
+version: "2"
 services:
-  gitit:
+  wiki:
     image: gitit
     build:
       context: ./
     volumes:
-      - ./gitit.wiki:/gitit.wiki
-    ports:
-      - 80:5001
+      - "./:/gitit.wiki"
     environment:
       PATH: "/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
       LANG: "en_US.UTF-8"
-    command : gitit -f /gitit.wiki/gitit.conf
+    command : gitit -f gitit.conf
+    ports:
+      - "80:5001"

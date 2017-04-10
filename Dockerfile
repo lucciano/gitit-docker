@@ -11,3 +11,5 @@ ENV PATH /root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbi
 
 EXPOSE 5001
 
+RUN mkdir /gitit.wiki
+WORKDIR /gitit.wiki
